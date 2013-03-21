@@ -1,5 +1,7 @@
 $(document).on("pageinit", function(event){
 	var activity_start = new Date() - 4980000;  // some date
+	displayCounter(activity_start);
+});
 
 function parseTime($num)
 {

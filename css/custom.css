@@ -2,3 +2,22 @@
 	jQuery Mobile Boilerplate
 	css/custom.css
 */
+
+ .activity_hours, .activity_minutes, .activity_seconds {
+ 	font-size: 40px;
+ }
+ .activity_hours_label, .activity_minutes_label, .activity_seconds_label {
+ 	position: relative;
+ 	font-size: 10px;
+	top: -20px;
+	left: -4px;
+ }
+
+ .activity_hours, .activity_minutes {
+ 	font-weight: bold;
+ }
+
+ .activity_milliseconds {
+ 	position: relative;
+ 	left: -14px;
+ }

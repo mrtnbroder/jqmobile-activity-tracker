@@ -16,7 +16,7 @@ $(document).on("pageinit", function(event){
 		var activity_now = new Date();
 		var activity_time = Math.abs(activity_now - activity_start);
 
-		activity_hours = parseTime(parseInt(activity_time/(1000*60*60))%24);
+		activity_hours = parseTime(parseInt(activity_time/(1000*60*60)));
 		activity_minutes = parseTime(parseInt(activity_time/(1000*60))%60);
 		activity_seconds = parseTime(parseInt(activity_time/1000)%60);
 		activity_milliseconds = parseTime(parseInt(activity_time/10)%60);

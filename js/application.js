@@ -1,9 +1,4 @@
-/* 
-	jQuery Mobile Boilerplate
-	application.js
-*/
 $(document).on("pageinit", function(event){
-
 	var activity_start = new Date() - 4980000;  // some date
 
 	function parseTime($num)

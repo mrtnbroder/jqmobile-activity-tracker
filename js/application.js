@@ -21,10 +21,10 @@ $(document).on("pageinit", function(event){
 		activity_seconds = parseTime(parseInt(activity_time/1000)%60);
 		activity_milliseconds = parseTime(parseInt(activity_time/10)%60);
 
-		$('.activity_hours').text(activity_hours);
-		$('.activity_minutes').text(activity_minutes);
-		$('.activity_seconds').text(activity_seconds);
-		$('.activity_milliseconds span').text(activity_milliseconds);
+		$('.activity_counter.js .activity_hours').text(activity_hours);
+		$('.activity_counter.js .activity_minutes').text(activity_minutes);
+		$('.activity_counter.js .activity_seconds').text(activity_seconds);
+		$('.activity_counter.js .activity_milliseconds span').text(activity_milliseconds);
 		// console.log(activity_hours + ' ' + activity_minutes + ' ' + activity_seconds + ' ' + activity_milliseconds);
 		setTimeout(arguments.callee, 10);
 	})();

@@ -2,6 +2,11 @@
 	jQuery Mobile Boilerplate
 	css/custom.css
 */
+.activity_counter {
+	width: 220px;
+	margin: 0 auto;
+	text-align: center;
+}
 
  .activity_hours, .activity_minutes, .activity_seconds {
  	font-size: 40px;

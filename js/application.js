@@ -1,11 +1,11 @@
 $(document).on("pageinit", function(event){
 	var activity_start = new Date() - 4980000;  // some date
 
-	function parseTime($num)
-	{
-		if($num < 10) return '0' + $num;
-		return $num;
-	}
+function parseTime($num)
+{
+	if($num < 10) return '0' + $num;
+	return $num;
+}
 
 	(function(){
 		var activity_now = new Date();

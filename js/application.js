@@ -3,12 +3,6 @@ $(document).on("pageinit", function(event){
 	displayCounter(activity_start);
 });
 
-function parseTime($num)
-{
-	if($num < 10) return '0' + $num;
-	return $num;
-}
-
 function displayCounter(activity_start)
 {
 	var activity_now = new Date();
@@ -25,4 +19,14 @@ function displayCounter(activity_start)
 	$('.activity_counter.js .activity_milliseconds span').text(activity_milliseconds);
 	console.log(activity_hours + ' ' + activity_minutes + ' ' + activity_seconds + ' ' + activity_milliseconds);
 	setTimeout(function() {displayCounter(activity_start);}, 10);
+}
+
+function parseTime(num)
+{
+	if(num < 10)
+		return '0' + num;
+	
+	return num;
+}
+
 }

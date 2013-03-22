@@ -8,10 +8,10 @@ function displayCounter(activity_start)
 	var activity_now = new Date();
 	var activity_time = Math.abs(activity_now - activity_start);
 
-	activity_hours = parseTime(parseInt(activity_time/(1000*60*60)));
-	activity_minutes = parseTime(parseInt(activity_time/(1000*60))%60);
-	activity_seconds = parseTime(parseInt(activity_time/1000)%60);
-	activity_milliseconds = parseTime(parseInt(activity_time/10)%60);
+	activity_hours = parseTime(calcHours(activity_time));
+	activity_minutes = parseTime(calcMinutes(activity_time));
+	activity_seconds = parseTime(calcSeconds(activity_time));
+	activity_milliseconds = parseTime(calcMilliseconds(activity_time));
 
 	$('.activity_counter.js .activity_hours').text(activity_hours);
 	$('.activity_counter.js .activity_minutes').text(activity_minutes);
@@ -29,4 +29,22 @@ function parseTime(num)
 	return num;
 }
 
+function calcHours(activity_time)
+{
+	return parseInt(activity_time/(1000*60*60)%24);
+}
+
+function calcMinutes(activity_time)
+{
+	return parseInt(activity_time/(1000*60))%60;
+}
+
+function calcSeconds(activity_time)
+{
+	return parseInt(activity_time/1000)%60;
+}
+
+function calcMilliseconds(activity_time) 
+{
+	return parseInt(activity_time/10)%100;	
 }
